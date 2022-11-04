@@ -1,11 +1,63 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
 }  
+
+h1, h2 {
+    font-weight: bold;
+}
+
 header {
     height: 100vh;
     background-image: url("../images/bg-img.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav a {
+    color: white;
+}
+
+nav a:visited {
+    color: white;
+}
+
+nav {   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-ul {
+    display: none;
+}
+
+.menu-icon a svg {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-container {
+    padding: 15px 0;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    width: 150px;
+}
+
+.account a {
+    white-space: nowrap;
+}
+
+.container {
+    margin: 0 15px;
 }
 
   /**                               /
@@ -22,4 +74,21 @@ header {
 
 @media screen and (min-width:920px) {
 
+    .nav-ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .nav-ul li {
+    padding: 0 22px;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .logo {
+        width: 100%;
+    }
 }
