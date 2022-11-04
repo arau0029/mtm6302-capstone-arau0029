@@ -1,10 +1,12 @@
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.5rem;
 }  
 
 h1, h2 {
+    line-height: 1em;
     font-weight: bold;
 }
 
@@ -12,21 +14,21 @@ a{
     text-decoration: none;
 }
 
+h1 {
+    font-size: 32px;
+}
+
 /* STYLES HEADER */
 
 header {
     height: 100vh;
-    background-image: url("../images/bg-img.jpeg");
+    background-image: url("../images/bg-img-reduced-exposure.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 
-nav a, .footer-nav a {
-    color: white;
-}
-
-nav a:visited, .footer-nav a {
+nav a, .footer-nav a, nav a:visited, .footer-nav a:visited {
     color: white;
 }
 
@@ -63,6 +65,39 @@ nav {
     margin: 0 15px;
 }
 
+header p, header h1 {
+    color: white;
+}
+
+.container-2 {
+    padding: 150px 0 100px 0;
+    margin: 0 30px;
+}
+
+.container-2 p {
+    margin: 1rem 0;
+}
+
+.header-form input {
+    display: block;
+    margin: 20px 0;
+}
+
+#submit-date {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 7px 35px;
+    background-color: transparent;
+    color: white;
+}
+
+#submit-date:hover {
+    background-color: white;
+    color: rgb(10, 10, 50);
+}
+
 /* END OF HEADER */
 
 /* STYLES FOOTER */
@@ -95,13 +130,13 @@ padding: 5px 0;
 
 @media screen and (min-width: 605px) {
 
-}
-   
-   /**                               /
- /         DESKTOP STYLE           /
-/                               **/
+    body {
+        font-size: 16px;
+    }
 
-@media screen and (min-width:920px) {
+    h1 {
+        font-size: 60px;
+    }
 
     .nav-ul {
         display: flex;
@@ -117,7 +152,37 @@ padding: 5px 0;
         display: none;
     }
 
+    .container-2 {
+        padding: 220px 0 100px 0;
+        margin: 0 100px;
+    }
+
+}
+
+   /**                               /
+ /         DESKTOP STYLE           /
+/                               **/
+
+@media screen and (min-width:920px) {
+
+    h1 {
+        font-size: 60px;
+        margin: 0 0 30px 0;
+    }
+
     .logo {
         width: 100%;
     }
+
+    .container-2 {
+        padding: 220px 0 100px 0;
+        margin: 0 auto;
+        width: 45%;
+        text-align: center;
+    }
+
+    .header-form input {
+        margin: 20px auto;
+    }
 }
+
