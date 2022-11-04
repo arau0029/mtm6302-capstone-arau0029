@@ -1,3 +1,12 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}  
+header {
+    height: 100vh;
+    background-image: url("../images/bg-img.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
   /**                               /
  /         TABLET STYLE            /
