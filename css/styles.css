@@ -137,6 +137,31 @@ header p, header h1, .home-calendar-label {
     display: none;
 }
 
+.fav-button {
+    color: black;
+    text-align: right;
+    margin: 20px 0;
+}
+
+.fav-button label svg:hover {
+    color: #911;
+}
+
+.fav-button label svg {
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.fav-button label input {
+    position:absolute;
+    top:-20px;
+}
+
+.fav-button input:checked + span {
+    color:rgb(207, 59, 59);
+}
+
 /*END MAIN*/
 
 /* STYLES FOOTER */
@@ -282,4 +307,6 @@ padding: 5px 0;
         top: 48%;
         left: 48%;
     }
+
+    /* END MAIN */
 }
