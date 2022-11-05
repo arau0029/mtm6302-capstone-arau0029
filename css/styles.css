@@ -18,6 +18,15 @@ h1 {
     font-size: 32px;
 }
 
+h2 {
+    font-size: 28px;
+}
+
+main {
+    background-color: aliceblue;
+    padding: 20px;
+}
+
 /* STYLES HEADER */
 
 header {
@@ -65,7 +74,7 @@ nav {
     margin: 0 15px;
 }
 
-header p, header h1 {
+header p, header h1, .home-calendar-label {
     color: white;
 }
 
@@ -99,6 +108,36 @@ header p, header h1 {
 }
 
 /* END OF HEADER */
+
+/*STYLES MAIN*/
+
+.daily-img {
+    width: 100%;
+    height: 40vh;
+    margin-bottom: 20px;
+}
+
+.daily-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.date-chosen {
+    font-style: italic;
+}
+
+.img-description {
+    margin: 1rem 0;
+}
+
+.zoom {
+    display: none;
+}
+
+/*END MAIN*/
 
 /* STYLES FOOTER */
 
@@ -137,6 +176,12 @@ padding: 5px 0;
     h1 {
         font-size: 60px;
     }
+    
+    main {
+        padding: 30px;
+    }
+
+    /* STYLES HEADER */
 
     .nav-ul {
         display: flex;
@@ -156,7 +201,29 @@ padding: 5px 0;
         padding: 220px 0 100px 0;
         margin: 0 100px;
     }
+    
+    /* END HEADER */
+    
+    /* STYLES MAIN */
 
+    .container-main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+     }
+
+    .daily-img {
+        margin-right: 30px;
+        width: 50%;
+        height: 80vh;
+    }
+
+    .daily-txt {
+        margin: auto 0;
+        width: 50%;
+    }
+
+    /* END MAIN */
 }
 
    /**                               /
@@ -170,12 +237,14 @@ padding: 5px 0;
         margin: 0 0 30px 0;
     }
 
+    /* STYLES HEADER */
+
     .logo {
         width: 100%;
     }
 
     .container-2 {
-        padding: 220px 0 100px 0;
+        padding: 160px 0 100px 0;
         margin: 0 auto;
         width: 45%;
         text-align: center;
@@ -184,5 +253,33 @@ padding: 5px 0;
     .header-form input {
         margin: 20px auto;
     }
-}
 
+    /* END HEADER */
+
+    /*STYLES MAIN*/
+
+    .daily-img {
+        cursor: pointer;
+    }
+
+    .daily-img:hover img {
+        filter: brightness(40%);
+    }
+
+    .daily-img {
+        position: relative;
+        z-index: 5;
+    }
+
+    .daily-img:hover .zoom {
+        display: block;
+    }
+
+    .daily-img .zoom {
+        color: white;
+        position: absolute;
+        z-index: 999;
+        top: 48%;
+        left: 48%;
+    }
+}
