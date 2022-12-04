@@ -37,7 +37,7 @@ header {
 }
 
 
-nav a, .footer-nav a, nav a:visited, .footer-nav a:visited {
+nav a, .footer_nav a, nav a:visited, .footer_nav a:visited {
     color: white;
 }
 
@@ -47,16 +47,16 @@ nav {
     justify-content: space-between;
 }
 
-.nav-ul {
+.nav_ul {
     display: none;
 }
 
-.menu-icon a svg {
+.menu_icon a svg {
     width: 30px;
     height: 30px;
 }
 
-.nav-container {
+.nav_container {
     padding: 15px 0;
 }
 
@@ -74,20 +74,20 @@ nav {
     margin: 0 15px;
 }
 
-header p, header h1, .home-calendar-label {
+header p, header h1, .home_calendar_label {
     color: white;
 }
 
-.container-2 {
+.container_2 {
     padding: 150px 0 100px 0;
     margin: 0 30px;
 }
 
-.container-2 p {
+.container_2 p {
     margin: 1rem 0;
 }
 
-.header-form input {
+.header_form input {
     display: block;
     margin: 20px 0;
 }
@@ -96,7 +96,7 @@ input:hover {
     cursor: pointer;
 }
 
-#submit-date {
+#submit_date {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     border: 2px solid white;
@@ -106,7 +106,7 @@ input:hover {
     color: white;
 }
 
-#submit-date:hover {
+#submit_date:hover {
     background-color: white;
     color: rgb(10, 10, 50);
 }
@@ -115,13 +115,13 @@ input:hover {
 
 /*STYLES MAIN*/
 
-.daily-img {
+.daily_img {
     width: 100%;
     height: 40vh;
     margin-bottom: 20px;
 }
 
-.daily-img img{
+.daily_img img{
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -129,11 +129,11 @@ input:hover {
     overflow: hidden;
 }
 
-.date-chosen {
+.date_chosen {
     font-style: italic;
 }
 
-.img-description {
+.img_description {
     margin: 1rem 0;
 }
 
@@ -141,28 +141,28 @@ input:hover {
     display: none;
 }
 
-.fav-button {
+.fav_button {
     color: black;
     text-align: right;
     margin: 20px 0;
 }
 
-.fav-button label svg:hover {
+.fav_button label svg:hover {
     color: #911;
 }
 
-.fav-button label svg {
+.fav_button label svg {
     cursor: pointer;
     width: 1.5rem;
     height: 1.5rem;
 }
 
-.fav-button label input {
+.fav_button label input {
     position:absolute;
     top:-20px;
 }
 
-.fav-button input:checked + span {
+.fav_button input:checked + span {
     color:rgb(207, 59, 59);
 }
 
@@ -174,19 +174,22 @@ footer {
     background-color: rgb(10, 10, 50);
 }
 
-.footer-nav {
+.footer_nav {
     margin: 0 15px;
     padding: 15px 0;
+}
+
+.nav_ul_footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.nav-ul-footer li {
+.nav_ul_footer li {
 padding: 5px 0;
 }
 
-.txt-end {
+.txt_end {
     text-align: end;
 }
 
@@ -212,21 +215,21 @@ padding: 5px 0;
 
     /* STYLES HEADER */
 
-    .nav-ul {
+    .nav_ul {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
     
-    .nav-ul li {
+    .nav_ul li {
     padding: 0 22px;
     }
 
-    .menu-icon {
+    .menu_icon {
         display: none;
     }
 
-    .container-2 {
+    .container_2 {
         padding: 130px 0 100px 0;
         margin: 0 100px;
     }
@@ -235,19 +238,19 @@ padding: 5px 0;
     
     /* STYLES MAIN */
 
-    .container-main {
+    .container_main {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
      }
 
-    .daily-img {
+    .daily_img {
         margin-right: 30px;
         width: 50%;
         height: 80vh;
     }
 
-    .daily-txt {
+    .daily_txt {
         margin: auto 0;
         width: 50%;
     }
@@ -272,14 +275,14 @@ padding: 5px 0;
         width: 100%;
     }
 
-    .container-2 {
+    .container_2 {
         padding: 160px 0 100px 0;
         margin: 0 auto;
         width: 45%;
         text-align: center;
     }
 
-    .header-form input {
+    .header_form input {
         margin: 20px auto;
     }
 
@@ -287,24 +290,24 @@ padding: 5px 0;
 
     /*STYLES MAIN*/
 
-    .daily-img {
+    .daily_img {
         cursor: pointer;
     }
 
-    .daily-img:hover img {
+    .daily_img:hover img {
         filter: brightness(40%);
     }
 
-    .daily-img {
+    .daily_img {
         position: relative;
         z-index: 5;
     }
 
-    .daily-img:hover .zoom {
+    .daily_img:hover .zoom {
         display: block;
     }
 
-    .daily-img .zoom {
+    .daily_img .zoom {
         color: white;
         position: absolute;
         z-index: 999;
