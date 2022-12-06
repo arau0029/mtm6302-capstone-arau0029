@@ -24,24 +24,33 @@ h2 {
 
 main {
     background-color: aliceblue;
+}
+
+.container_main {
     padding: 20px;
 }
 
 /* STYLES HEADER */
 
-header {
+.home_header {
     height: 100vh;
     background-image: url("../images/bg-img-reduced-exposure.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.bg_img {
+    height: 100vh;
+    background-image: url("../images/bg-img-reduced-exposure.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 nav a, .footer_nav a, nav a:visited, .footer_nav a:visited {
     color: white;
 }
 
-nav {   
+nav {  
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -52,8 +61,8 @@ nav {
 }
 
 .menu_icon a svg {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
 }
 
 .nav_container {
@@ -114,6 +123,35 @@ input:hover {
 /* END OF HEADER */
 
 /*STYLES MAIN*/
+
+.hide {
+    display: none;
+}
+
+.display {
+    margin: 0;
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    transition: background-color 300ms;
+}
+
+.display:hover {
+    cursor: pointer;
+}
+
+.fullimg {
+    object-fit: contain;
+    width: 100%;
+    display: block;
+    margin: auto;
+    
+}
 
 .daily_img {
     width: 100%;
@@ -208,8 +246,8 @@ padding: 5px 0;
     h1 {
         font-size: 60px;
     }
-    
-    main {
+
+    .container_main {
         padding: 30px;
     }
 
@@ -255,6 +293,9 @@ padding: 5px 0;
         width: 50%;
     }
 
+    .fullimg {
+        height: 100%; 
+    }
     /* END MAIN */
 }
 
@@ -290,15 +331,12 @@ padding: 5px 0;
 
     /*STYLES MAIN*/
 
-    .daily_img {
-        cursor: pointer;
-    }
-
     .daily_img:hover img {
         filter: brightness(40%);
     }
 
-    .daily_img {
+    .daily_img { 
+        cursor: pointer;
         position: relative;
         z-index: 5;
     }
@@ -310,7 +348,7 @@ padding: 5px 0;
     .daily_img .zoom {
         color: white;
         position: absolute;
-        z-index: 999;
+        z-index: 900;
         top: 48%;
         left: 48%;
     }
