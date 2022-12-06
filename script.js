@@ -90,7 +90,6 @@ const $fullimg_container = document.querySelector('.fullimg_container')
         $fullimg_container.classList.toggle('display')
   }
 
-  $fullimg_container.scrollIntoView();
 })
 
 $fullimg_container.addEventListener('click', function () {
@@ -100,5 +99,44 @@ $fullimg_container.addEventListener('click', function () {
         $fullimg_container.classList.toggle('display')
   }
 
-  $main.scrollIntoView();
  })
+ 
+// Makes 'Today's picture' anchor on footer work
+
+const todayArray = [
+    today.getFullYear(),
+    today.getMonth()+1,
+    today.getDate()
+]
+
+const todayDate = todayArray.join('-')
+
+const $today_footer = document.getElementById('today_pic')
+
+async function apifooter () {
+    const url = `https://api.nasa.gov/planetary/apod?api_key=LAZAEAC6Pw6HoGAejxcCPxugT2agihZwOGmioXUr&date=${todayDate}`
+    const response = await fetch(url)
+    const json = await response.json()
+    json.date = todayDate;
+    const $date = json.date
+    const $explanation = json.explanation
+    const $title = json.title
+    const $url = json.url
+    const $hdurl = json.hdurl
+
+    $main_img.src = $url
+    $main_img.alt = $title
+    $img_title.textContent = $title
+    $date_chosen.textContent = $date
+    $img_description.textContent = $explanation
+    $fullimg.src = $hdurl
+    $fullimg.alt = $title
+
+    $main.scrollIntoView();
+}
+
+$today_footer.addEventListener('click', function (e){
+    e.preventDefault()
+    apifooter()
+    $main.classList.remove('hide')
+})
