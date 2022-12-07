@@ -32,7 +32,7 @@
                                 <input type="date" name="nav_calendar" id="nav_calendar">
                             </form>
                         </li>
-                        <li class="favourites"><a href="#fav_section">Favourites</a></li>
+                        <li class="favourites"><a href="#fav_container">Favourites</a></li>
                     </ul>
                 </nav>
             </div>
@@ -41,7 +41,7 @@
                 <p>Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.</p>
                 <form action="" method="get" class="header_form" id="header_form">
                     <label for="home_calendar" class="home_calendar_label"> Select a date below:</label>
-                    <input type="date" name="home_calendar" id="home_calendar">
+                    <input type="date" name="home_calendar" id="home_calendar" required>
                     <input type="submit" name="submit_date" id="submit_date">
                 </form>
             </div>
@@ -61,19 +61,12 @@
                     <img src="" alt="" id="main_img">
                 </div>
                 <div class="daily_txt">
-                    <!-- <div class="fav_button">
-                        <label>
-                            <input type="checkbox" id="add_fav"/>
-                            <span>
+                    <div class="fav_button">
+                        <button id="add_fav">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
                                 </svg>
-                            </span>
-                        </label>
-                    </div> -->
-                    <div class="buttons">
-                        <button id="add_fav">Add to favourites</button>
-                        <button id="remove_fav">Remove from favourites</button>
+                        </button>
                     </div>
                     <div class="daily_information">
                         <h2 class="img_title"></h2>
@@ -83,20 +76,26 @@
                 </div>
             </div>
         </section>
-        <section id="fav_section"> 
+        <section id="fav_container" class="fav_container"> 
             <h2>Favourites</h2> 
+            <div id="fav_section_container">
+                <div id="fav_section" class="fav_section"></div>
+            </div>
         </section>
     </main>
     <footer>
         <div class="footer_nav">
             <ul class="nav_ul_footer">
                 <li><a href="" id="today_pic">Today's picture</a></li>
-                <li><a href="#fav_section">Favourites</a></li>
+                <li><a href="#fav_container">Favourites</a></li>
             </ul>
         </div>
     </footer>
-    <div class="fullimg_container hide">
-        <img src="" alt="" class="fullimg">
+    <div id="main_full" class="fullimg_container hide">
+        <img src="" alt="" id="main_full_img" class="fullimg">
+    </div>
+    <div id="fav_full" class="fullimg_container hide">
+        <img src="" alt="" id="fav_full_img" class="fullimg">
     </div>
     <script src="script.js"></script>
 </body>

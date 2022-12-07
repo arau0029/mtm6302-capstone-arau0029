@@ -26,8 +26,9 @@ main {
     background-color: aliceblue;
 }
 
-.container_main {
-    padding: 20px;
+input[type=date] {
+    padding: 2px 5px;
+    border-radius: 5px;
 }
 
 /* STYLES HEADER */
@@ -46,7 +47,7 @@ main {
     background-size: cover;
 }
 
-nav a, .footer_nav a, nav a:visited, .footer_nav a:visited {
+nav a, nav a:visited {
     color: white;
 }
 
@@ -124,6 +125,10 @@ input:hover {
 
 /*STYLES MAIN*/
 
+.container_main, .fav_container {
+    padding: 20px;
+}
+
 .hide {
     display: none;
 }
@@ -131,7 +136,7 @@ input:hover {
 .display {
     margin: 0;
     display: block;
-    position: absolute;
+    position: fixed;
     z-index: 9999;
     top: 0;
     left: 0;
@@ -153,19 +158,20 @@ input:hover {
     
 }
 
-.daily_img {
+.daily_img, .fav_img {
     width: 100%;
     height: 40vh;
     margin-bottom: 20px;
 }
 
-.daily_img img{
+.daily_img img, .fav_img img{
     width: 100%;
     height: 100%;
     border-radius: 10px;
     object-fit: cover;
     overflow: hidden;
 }
+
 
 .date_chosen {
     font-style: italic;
@@ -180,28 +186,78 @@ input:hover {
 }
 
 .fav_button {
-    color: black;
     text-align: right;
+}
+
+#add_fav {
+    background-color: transparent;
+    border: none;
+    color: black;
     margin: 20px 0;
 }
 
-.fav_button label svg:hover {
+.fav_button svg:hover {
+    cursor: pointer;
     color: #911;
 }
 
-.fav_button label svg {
-    cursor: pointer;
+.fav_button svg {
     width: 1.5rem;
     height: 1.5rem;
 }
 
-.fav_button label input {
-    position:absolute;
-    top:-20px;
+.fav:hover {
+    border-radius: 10px;
+    background-color: aliceblue;
+    color:rgb(8, 8, 37);
 }
 
-.fav_button input:checked + span {
-    color:rgb(207, 59, 59);
+.fav:hover button {
+    background-color: rgb(8, 8, 37);
+}
+
+.fav:hover button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: rgb(10, 10, 50);
+}
+
+.fav_container {
+    background-color: rgb(8, 8, 37);
+    color: white;
+}
+
+.fav_container h2{
+    margin-bottom: 20px;
+}
+
+.fav_txt h3 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.fav_txt p {
+    margin-bottom: 20px;
+}
+
+.fav {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.remove_bttn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 7px 35px;
+    background-color: transparent;
+    color: white;
+}
+
+.remove_bttn:hover {
+    background-color: white;
+    color: rgb(10, 10, 50);
 }
 
 /*END MAIN*/
@@ -209,12 +265,17 @@ input:hover {
 /* STYLES FOOTER */
 
 footer {
-    background-color: rgb(10, 10, 50);
+    background-color: aliceblue;
 }
 
 .footer_nav {
     margin: 0 15px;
     padding: 15px 0;
+}
+
+.footer_nav a, .footer_nav a:visited {
+    color: rgb(8, 8, 37);
+    font-weight: bold;
 }
 
 .nav_ul_footer {
@@ -247,9 +308,7 @@ padding: 5px 0;
         font-size: 60px;
     }
 
-    .container_main {
-        padding: 30px;
-    }
+
 
     /* STYLES HEADER */
 
@@ -276,16 +335,40 @@ padding: 5px 0;
     
     /* STYLES MAIN */
 
+    .container_main, .fav_container {
+        padding: 30px;
+    }
+
     .container_main {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
      }
 
+     .fav_section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .fav {
+        margin: 0 10px 40px 10px;
+    }
+
     .daily_img {
         margin-right: 30px;
         width: 50%;
         height: 80vh;
+    }
+
+    .fav_img {
+        width: 15vh;
+        height: 15vh;
+    }
+
+    .fav_txt {
+        width: 15vh;
     }
 
     .daily_txt {
@@ -295,6 +378,10 @@ padding: 5px 0;
 
     .fullimg {
         height: 100%; 
+    }
+
+    .fav_container h2{
+        margin-bottom: 30px;
     }
     /* END MAIN */
 }
@@ -330,6 +417,15 @@ padding: 5px 0;
     /* END HEADER */
 
     /*STYLES MAIN*/
+
+    .fav_img {
+        width: 40vh;
+        height: 40vh;
+    }
+
+    .fav_txt {
+        width: 40vh;
+    }
 
     .daily_img:hover img {
         filter: brightness(40%);
