@@ -106,14 +106,15 @@ function buildFavourites () {
 
     for ( let  i=0; i < data.favourites.length; i++ ) {
         const favourite = data.favourites[i]
-        html.push(`<div class="${favourite.date}"><h2>${favourite.title}</h2><img src="${favourite.url}"></div>`)
+        html.push(`<div id="${favourite.date}"><h3>${favourite.title}</h3><p>${favourite.date}</p><img src="${favourite.url}"></div>`)
         $fav_section.innerHTML = html.join('')
     } 
 }
 
-// function removeFavourties () {
-
-// }
+function removeFavourites () {
+    const $remove_html = document.getElementById(`${data.apod.date}`)
+    $remove_html.remove()
+ }
 
 function loadFavourites () {
     const storage = localStorage.getItem('apodFavourites')
@@ -180,11 +181,11 @@ $add_fav.addEventListener('click', function (){
     buildFavourites()
 })
 
-// $remove_fav.addEventListener('click', function (){
-//     data.favourites.splice(data.apod)
-//     saveFavourites()
-//     removeFavourites()
-// })
+$remove_fav.addEventListener('click', function (){
+    data.favourites.splice(data.apod)
+    saveFavourites()
+    removeFavourites()
+})
 
 
 loadFavourites()
