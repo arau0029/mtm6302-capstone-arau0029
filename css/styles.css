@@ -207,6 +207,7 @@ input:hover {
 }
 
 .fav:hover {
+    cursor: pointer;
     border-radius: 10px;
     background-color: aliceblue;
     color:rgb(8, 8, 37);
@@ -355,6 +356,8 @@ padding: 5px 0;
     .fav {
         margin: 0 10px 40px 10px;
     }
+
+
 
     .daily_img {
         margin-right: 30px;
